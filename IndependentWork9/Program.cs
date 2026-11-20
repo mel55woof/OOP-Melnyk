@@ -10,7 +10,7 @@ namespace IndependentWork9
             Console.OutputEncoding = Encoding.UTF8;
             Console.WriteLine("=== Самостійна робота №9: Dictionary<TKey, TValue> та HashSet<T> ===\n");
 
-            // Сценарій 1: FileMetadataCache
+           
             Console.WriteLine("--- Сценарій 1: Кеш метаданих файлів ---");
             var cache = new FileMetadataCache();
             cache.Add("C:/docs/report.pdf", new FileMetadata
@@ -34,13 +34,13 @@ namespace IndependentWork9
             cache.Remove("C:/code/Program.cs");
             Console.WriteLine($"Елементів у кеші після видалення: {cache.Count}\n");
 
-            // Сценарій 2: TagManager
+           
             Console.WriteLine("--- Сценарій 2: Менеджер унікальних тегів ---");
             var tagManager = new TagManager();
             tagManager.AddTag("art-1", "C#");
             tagManager.AddTag("art-1", "OOP");
             tagManager.AddTag("art-1", "Collections");
-            tagManager.AddTag("art-1", "c#"); // дублікат ігнорується
+            tagManager.AddTag("art-1", "c#"); 
 
             tagManager.AddTag("art-2", "C#");
             tagManager.AddTag("art-2", "Performance");
@@ -52,7 +52,7 @@ namespace IndependentWork9
             tagManager.RemoveTag("art-1", "OOP");
             Console.WriteLine($"Спільні після видалення OOP з art-1: {string.Join(", ", tagManager.FindCommonTags("art-1", "art-2"))}\n");
 
-            // Сценарій 3: SearchIndex
+          
             Console.WriteLine("--- Сценарій 3: Інвертований пошуковий індекс ---");
             var index = new SearchIndex();
             index.AddDocument(1, "C# Dictionary provides fast O(1) lookup by key.");
